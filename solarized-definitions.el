@@ -114,6 +114,7 @@ in order to expand or compress the tonal range displayed."
                      opt-under t)))
         `((;; basic
            (default ((t (:foreground ,base0 ,:background ,back))))
+           (shadow ((t (:foreground, base01))))
            (cursor
             ((t (:foreground ,base0 :background ,base03 :inverse-video t))))
            (escape-glyph-face ((t (:foreground ,red))))
@@ -161,13 +162,14 @@ in order to expand or compress the tonal range displayed."
            (custom-state ((t (:foreground ,green))))
            (custom-variable-tag ((t (:foreground ,orange :weight ,bold))))
            ;; diff
-           (diff-added ((t (:foreground ,green :inverse-video t))))
-           (diff-changed ((t (:foreground ,yellow :inverse-video t))))
-           (diff-removed ((t (:foreground ,red :inverse-video t))))
-           (diff-header ((t (:background ,base01))))
-           (diff-file-header
-            ((t (:background ,base1 :foreground ,base01 :weight ,bold))))
-           (diff-refine-change ((t (:background ,base1))))
+           (diff-changed       ((t (:foreground ,yellow))))
+           (diff-added         ((t (:foreground ,cyan))))
+           (diff-removed       ((t (:foreground ,red))))
+           (diff-header        ((t (:background ,base02))))
+           (diff-file-header   ((t (:background ,base02
+                                                :foreground ,base01
+                                                :weight     ,bold))))
+           (diff-refine-change ((t (:background ,base02))))
            ;; IDO
            (ido-only-match ((t (:foreground ,green))))
            (ido-subdir ((t (:foreground ,blue))))
